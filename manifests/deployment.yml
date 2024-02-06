@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cwr06022024 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cwr06022024
+  template:
+    metadata:
+      labels:
+        app: cwr06022024 
+    spec:
+      containers:
+        - name: cwr06022024 
+          image: anjiacr.azurecr.io/cwr06022024
+          ports:
+          - containerPort: 80
