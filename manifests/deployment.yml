@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: 6febapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 6febapp
+  template:
+    metadata:
+      labels:
+        app: 6febapp 
+    spec:
+      containers:
+        - name: 6febapp 
+          image: anjiacr.azurecr.io/6febapp
+          ports:
+          - containerPort: 80
